@@ -1,3 +1,10 @@
+local lplr = game.Players.LocalPlayer
+local camera = game:GetService("Workspace").CurrentCamera
+local CurrentCamera = workspace.CurrentCamera
+local worldToViewportPoint = CurrentCamera.worldToViewportPoint
+local HeadOff = Vector3.new(0, 0.5, 0)
+local LegOff = Vector3.new(0,3,0)
+
 if not getgenv().OptionsBoxESP then
     getgenv().OptionsBoxESP = {
         OutlineColor = Color3.new(0,0,0),
