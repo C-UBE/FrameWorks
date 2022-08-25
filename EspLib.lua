@@ -174,6 +174,7 @@ getgenv().BoxESP = function(v)
                         HealthBar.Visible = false
                         Name.Visible = false
                         Misc.Visible = false
+                        Misc2.Visible = false
                         LookLine.Visible = false
                     elseif v.TeamColor ~= lplr.TeamColor and getgenv().OptionsBoxESP["TeamCheck"] then
                         BoxOutline.Visible = getgenv().OptionsBoxESP["BoxNHealth"]
