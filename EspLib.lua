@@ -93,10 +93,12 @@ getgenv().BoxESP = function(v)
                 local Head = v.Character.Head
                 local hum = v.Character.Humanoid
                 local LineOff = Head.CFrame * Vector3.new(0,0,-3)
+                local HeadFlat = Head.CFrame * Vector3.new(0,0.5,0)
+                local RootFlat = RootPart.CFrame * Vector3.new(0,3,0)
                 local HeadPosition2 = worldToViewportPoint(CurrentCamera, LineOff)
                 local HeadPosition3 = worldToViewportPoint(CurrentCamera, Head.Position)
                 local RootPosition, RootVis = worldToViewportPoint(CurrentCamera, RootPart.Position)
-                local HeadPosition = worldToViewportPoint(CurrentCamera, Head.Position + HeadOff)
+                local HeadPosition = worldToViewportPoint(CurrentCamera, HeadFlat)
                 local LegPosition = worldToViewportPoint(CurrentCamera, RootPart.Position - LegOff)
 
                 local Size = (camera:WorldToViewportPoint(RootPart.Position - Vector3.new(0, 3, 0)).Y - camera:WorldToViewportPoint(RootPart.Position + Vector3.new(0, 2.6, 0)).Y) / 2
